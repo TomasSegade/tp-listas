@@ -169,6 +169,7 @@ namespace TP4_Listas
             this.btn_agr_sig.TabIndex = 15;
             this.btn_agr_sig.Text = "Agregar siguiente";
             this.btn_agr_sig.UseVisualStyleBackColor = true;
+            this.btn_agr_sig.Click += new System.EventHandler(this.btn_agr_sig_Click);
             // 
             // lst_listaEnla
             // 

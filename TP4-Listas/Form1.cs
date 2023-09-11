@@ -77,5 +77,26 @@ namespace TP4_Listas
                 MessageBox.Show("Debe seleccionar un nodo");
             }
         }
+
+        private void btn_agr_sig_Click(object sender, EventArgs e)
+        {
+            if (nodoSeleccionado != null)
+            {
+                if (txt_nom.Text.Length > 0 && txt_ape.Text.Length > 0 && txt_dir.Text.Length > 0 && txt_tel.Text.Length > 0)
+                {
+                    _lista.AgregarSiguiente(txt_nom.Text, txt_ape.Text, txt_dir.Text, txt_tel.Text, nodoSeleccionado);
+                    MostrarLista();
+                }
+                else
+                {
+                    MessageBox.Show("Datos invalidos");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un nodo");
+            }
+        }
     }
 }

@@ -62,7 +62,34 @@
 
         }
 
+        public void AgregarSiguiente(string nombre, string apellido, string direccion, string telefono, Nodo nodoSeleccionado)
+        {
+            Nodo nodo = new Nodo();
+            nodo.Codigo = 1; //CodigoSiguiente(nodoSeleccionado.Codigo,nodo.Codigo);
+            nodo.Nombre = nombre;
+            nodo.Apellido = apellido;
+            nodo.Direccion = direccion;
+            nodo.Telefono = telefono;
 
+            Nodo nodoSiguienteAlElegido = nodoSeleccionado.Siguiente;
+            if (nodoSiguienteAlElegido != null)
+            {
+                nodo.Siguiente = nodoSiguienteAlElegido;
+                nodoSeleccionado.Siguiente = nodo;
+            }
+            // Queda solucionar tema de cuando es el ultimo nodo y que el codigo me agrega siemppe el mismo
+
+        }
+
+        /*
+        private int CodigoSiguiente(int codigo_seleccionado, int codigo)
+        {
+            if (true)
+            {
+                cuando declaro el nodo viene en codigo 0
+            }
+            
+        }*/
         private int ProximoNumero()
         {
             if (NodoInicial == null)
@@ -74,6 +101,7 @@
 
         }
 
+       
         private Nodo BuscarAnterior(Nodo nodo, int numero)
         {
             if (nodo.Siguiente != null && nodo.Siguiente.Codigo == numero)
