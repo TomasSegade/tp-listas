@@ -32,12 +32,10 @@ namespace TP4_Listas
             this.btn_regi = new System.Windows.Forms.Button();
             this.btn_elim = new System.Windows.Forms.Button();
             this.lbl_list = new System.Windows.Forms.Label();
-            this.txt_cod = new System.Windows.Forms.TextBox();
             this.txt_nom = new System.Windows.Forms.TextBox();
             this.txt_ape = new System.Windows.Forms.TextBox();
             this.txt_dir = new System.Windows.Forms.TextBox();
             this.txt_tel = new System.Windows.Forms.TextBox();
-            this.lbl_cod = new System.Windows.Forms.Label();
             this.lbl_nom = new System.Windows.Forms.Label();
             this.lbl_ape = new System.Windows.Forms.Label();
             this.lbl_dir = new System.Windows.Forms.Label();
@@ -49,9 +47,9 @@ namespace TP4_Listas
             // 
             // btn_regi
             // 
-            this.btn_regi.Location = new System.Drawing.Point(581, 293);
+            this.btn_regi.Location = new System.Drawing.Point(581, 336);
             this.btn_regi.Name = "btn_regi";
-            this.btn_regi.Size = new System.Drawing.Size(195, 75);
+            this.btn_regi.Size = new System.Drawing.Size(195, 61);
             this.btn_regi.TabIndex = 0;
             this.btn_regi.Text = "Registrar";
             this.btn_regi.UseVisualStyleBackColor = true;
@@ -59,9 +57,9 @@ namespace TP4_Listas
             // 
             // btn_elim
             // 
-            this.btn_elim.Location = new System.Drawing.Point(820, 295);
+            this.btn_elim.Location = new System.Drawing.Point(820, 336);
             this.btn_elim.Name = "btn_elim";
-            this.btn_elim.Size = new System.Drawing.Size(195, 73);
+            this.btn_elim.Size = new System.Drawing.Size(195, 61);
             this.btn_elim.TabIndex = 1;
             this.btn_elim.Text = "Eliminar";
             this.btn_elim.UseVisualStyleBackColor = true;
@@ -76,15 +74,6 @@ namespace TP4_Listas
             this.lbl_list.Size = new System.Drawing.Size(164, 22);
             this.lbl_list.TabIndex = 3;
             this.lbl_list.Text = "Lista de pacientes";
-            // 
-            // txt_cod
-            // 
-            this.txt_cod.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_cod.Location = new System.Drawing.Point(109, 293);
-            this.txt_cod.MaxLength = 4;
-            this.txt_cod.Name = "txt_cod";
-            this.txt_cod.Size = new System.Drawing.Size(251, 20);
-            this.txt_cod.TabIndex = 4;
             // 
             // txt_nom
             // 
@@ -121,16 +110,6 @@ namespace TP4_Listas
             this.txt_tel.Name = "txt_tel";
             this.txt_tel.Size = new System.Drawing.Size(251, 20);
             this.txt_tel.TabIndex = 8;
-            // 
-            // lbl_cod
-            // 
-            this.lbl_cod.AutoSize = true;
-            this.lbl_cod.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cod.Location = new System.Drawing.Point(35, 295);
-            this.lbl_cod.Name = "lbl_cod";
-            this.lbl_cod.Size = new System.Drawing.Size(51, 15);
-            this.lbl_cod.TabIndex = 9;
-            this.lbl_cod.Text = "Codigo:";
             // 
             // lbl_nom
             // 
@@ -174,18 +153,19 @@ namespace TP4_Listas
             // 
             // btn_act
             // 
-            this.btn_act.Location = new System.Drawing.Point(581, 393);
+            this.btn_act.Location = new System.Drawing.Point(581, 420);
             this.btn_act.Name = "btn_act";
-            this.btn_act.Size = new System.Drawing.Size(195, 73);
+            this.btn_act.Size = new System.Drawing.Size(195, 64);
             this.btn_act.TabIndex = 14;
             this.btn_act.Text = "Actualizar datos";
             this.btn_act.UseVisualStyleBackColor = true;
+            this.btn_act.Click += new System.EventHandler(this.btn_act_Click);
             // 
             // btn_agr_sig
             // 
-            this.btn_agr_sig.Location = new System.Drawing.Point(820, 393);
+            this.btn_agr_sig.Location = new System.Drawing.Point(820, 420);
             this.btn_agr_sig.Name = "btn_agr_sig";
-            this.btn_agr_sig.Size = new System.Drawing.Size(195, 73);
+            this.btn_agr_sig.Size = new System.Drawing.Size(195, 64);
             this.btn_agr_sig.TabIndex = 15;
             this.btn_agr_sig.Text = "Agregar siguiente";
             this.btn_agr_sig.UseVisualStyleBackColor = true;
@@ -200,6 +180,7 @@ namespace TP4_Listas
             this.lst_listaEnla.ScrollAlwaysVisible = true;
             this.lst_listaEnla.Size = new System.Drawing.Size(1003, 212);
             this.lst_listaEnla.TabIndex = 17;
+            this.lst_listaEnla.SelectedIndexChanged += new System.EventHandler(this.lst_ListaEnla_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -214,12 +195,10 @@ namespace TP4_Listas
             this.Controls.Add(this.lbl_dir);
             this.Controls.Add(this.lbl_ape);
             this.Controls.Add(this.lbl_nom);
-            this.Controls.Add(this.lbl_cod);
             this.Controls.Add(this.txt_tel);
             this.Controls.Add(this.txt_dir);
             this.Controls.Add(this.txt_ape);
             this.Controls.Add(this.txt_nom);
-            this.Controls.Add(this.txt_cod);
             this.Controls.Add(this.lbl_list);
             this.Controls.Add(this.btn_elim);
             this.Controls.Add(this.btn_regi);
@@ -235,12 +214,10 @@ namespace TP4_Listas
         private System.Windows.Forms.Button btn_regi;
         private System.Windows.Forms.Button btn_elim;
         private System.Windows.Forms.Label lbl_list;
-        private System.Windows.Forms.TextBox txt_cod;
         private System.Windows.Forms.TextBox txt_nom;
         private System.Windows.Forms.TextBox txt_ape;
         private System.Windows.Forms.TextBox txt_dir;
         private System.Windows.Forms.TextBox txt_tel;
-        private System.Windows.Forms.Label lbl_cod;
         private System.Windows.Forms.Label lbl_nom;
         private System.Windows.Forms.Label lbl_ape;
         private System.Windows.Forms.Label lbl_dir;

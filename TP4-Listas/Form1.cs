@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TP4_Listas
@@ -13,45 +6,35 @@ namespace TP4_Listas
     public partial class Form1 : Form
     {
         ListaEnlazada _lista = new ListaEnlazada();
-
+        Nodo nodoSeleccionado;
         public Form1()
         {
             InitializeComponent();
         }
 
-        public void AgregarItemLista(Nodo unNodo)
+        public void AgregarItemLista(Nodo nodo)
         {
-            if (unNodo != null)
+            if (nodo != null)
             {
-                lst_listaEnla.Items.Add(unNodo.Datos);
-
-                AgregarItemLista(unNodo.Siguiente);
+                lst_listaEnla.Items.Add(nodo);
+                if (nodo.Siguiente != null)
+                {
+                    AgregarItemLista(nodo.Siguiente);
+                }
             }
         }
         public void MostrarLista()
         {
-            lst_listaEnla.Items.Clear();
-
-            if (_lista.Inicio != null)
-            {
-                AgregarItemLista(_lista.Inicio);
-            }
-
-          
+            this.lst_listaEnla.Items.Clear();
+            AgregarItemLista(_lista.NodoInicial);
         }
 
 
         private void btn_regi_Click(object sender, EventArgs e)
         {
-            if (txt_nom.Text.Length > 0 && txt_ape.Text.Length > 0 && txt_cod.Text.Length > 0 && txt_dir.Text.Length > 0 && txt_tel.Text.Length >0 )
+            if (txt_nom.Text.Length > 0 && txt_ape.Text.Length > 0 && txt_dir.Text.Length > 0 && txt_tel.Text.Length > 0)
             {
-                Nodo unNuevoNodo = new Nodo();
-                unNuevoNodo.Datos = $"Código: '{txt_cod.Text}'\n " +
-                                   $"Nombre: '{txt_nom.Text}'\n " +
-                                   $"Apellido: '{txt_ape.Text}'\n " +
-                                   $"Dirección: '{txt_dir.Text}'\n " +
-                                   $"Teléfono: '{txt_tel.Text}' ";
-                _lista.Registrar(unNuevoNodo);
+                _lista.Registrar(this.txt_nom.Text, this.txt_ape.Text, this.txt_dir.Text, this.txt_tel.Text);
                 MostrarLista();
             }
             else
@@ -62,7 +45,37 @@ namespace TP4_Listas
 
         private void btn_elim_Click(object sender, EventArgs e)
         {
-            //lst_listaEnla.SelectedItem
+
+            if (nodoSeleccionado != null)
+            {
+                _lista.EliminarSeleccionado(nodoSeleccionado.Codigo);
+                MostrarLista();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un nodo");
+            }
+
+
+        }
+
+        private void lst_ListaEnla_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            nodoSeleccionado = (Nodo)this.lst_listaEnla.SelectedItem;
+
+        }
+
+        private void btn_act_Click(object sender, EventArgs e)
+        {
+            if (nodoSeleccionado != null)
+            {
+                _lista.ActualizarDatos(txt_nom.Text, txt_ape.Text, txt_dir.Text, txt_tel.Text, nodoSeleccionado);
+                MostrarLista();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un nodo");
+            }
         }
     }
 }
