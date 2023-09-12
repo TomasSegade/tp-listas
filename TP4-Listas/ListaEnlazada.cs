@@ -65,12 +65,12 @@
         public void AgregarSiguiente(string nombre, string apellido, string direccion, string telefono, Nodo nodoSeleccionado)
         {
             Nodo nodo = new Nodo();
-            nodo.Codigo = 1; //CodigoSiguiente(nodoSeleccionado.Codigo,nodo.Codigo);
+            nodo.Codigo = ProximoNumero();
             nodo.Nombre = nombre;
             nodo.Apellido = apellido;
             nodo.Direccion = direccion;
             nodo.Telefono = telefono;
-
+            
             Nodo nodoSiguienteAlElegido = nodoSeleccionado.Siguiente;
             if (nodoSiguienteAlElegido != null)
             {
@@ -78,26 +78,41 @@
                 nodoSeleccionado.Siguiente = nodo;
             }
             // Queda solucionar tema de cuando es el ultimo nodo y que el codigo me agrega siemppe el mismo
+            // hacer funcion max y al resultdo sumarle 1
+            // La funcion maximo debe recorrer los nodos hasta que siguiente sea null y de ese nodo, extraer el codigo
+        }
+        private int BuscarMaximo(Nodo nodo, int codigo)
+        {
+            //condition ? consequent : alternative
+
+            int max = nodo.Codigo > codigo ? nodo.Codigo : codigo;
+            if (nodo.Siguiente != null) //no es el ultimo
+            {
+
+                return BuscarMaximo(nodo.Siguiente, max);
+
+            }
+            else
+            {
+                return max;
+            }
+
 
         }
 
-        /*
-        private int CodigoSiguiente(int codigo_seleccionado, int codigo)
-        {
-            if (true)
-            {
-                cuando declaro el nodo viene en codigo 0
-            }
-            
-        }*/
+
         private int ProximoNumero()
         {
             if (NodoInicial == null)
             {
                 return 1;
             }
+            int max = BuscarMaximo(NodoInicial, NodoInicial.Codigo);
 
-            return (NodoInicial.Codigo + 1);
+            //busco el maximo y le sumo uno
+
+            return max + 1;
+
 
         }
 
