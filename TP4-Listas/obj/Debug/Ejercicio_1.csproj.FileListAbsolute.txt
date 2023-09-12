@@ -1,0 +1,10 @@
+C:\Users\Tomas\source\repos\tp-listas\TP4-Listas\bin\Debug\TP4-Listas.exe.config
+C:\Users\Tomas\source\repos\tp-listas\TP4-Listas\bin\Debug\TP4-Listas.exe
+C:\Users\Tomas\source\repos\tp-listas\TP4-Listas\bin\Debug\TP4-Listas.pdb
+C:\Users\Tomas\source\repos\tp-listas\TP4-Listas\obj\Debug\Ejercicio_1.csproj.AssemblyReference.cache
+C:\Users\Tomas\source\repos\tp-listas\TP4-Listas\obj\Debug\TP4_Listas.Form1.resources
+C:\Users\Tomas\source\repos\tp-listas\TP4-Listas\obj\Debug\TP4_Listas.Properties.Resources.resources
+C:\Users\Tomas\source\repos\tp-listas\TP4-Listas\obj\Debug\Ejercicio_1.csproj.GenerateResource.cache
+C:\Users\Tomas\source\repos\tp-listas\TP4-Listas\obj\Debug\Ejercicio_1.csproj.CoreCompileInputs.cache
+C:\Users\Tomas\source\repos\tp-listas\TP4-Listas\obj\Debug\TP4-Listas.exe
+C:\Users\Tomas\source\repos\tp-listas\TP4-Listas\obj\Debug\TP4-Listas.pdb

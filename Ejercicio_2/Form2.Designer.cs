@@ -1,7 +1,7 @@
 ﻿
-namespace TP4_Listas
+namespace Ejercicio_2
 {
-    partial class Form1
+    partial class Form2
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -43,6 +43,10 @@ namespace TP4_Listas
             this.btn_act = new System.Windows.Forms.Button();
             this.btn_agr_sig = new System.Windows.Forms.Button();
             this.lst_listaEnla = new System.Windows.Forms.ListBox();
+            this.lbl_fechaNa = new System.Windows.Forms.Label();
+            this.lbl_doc = new System.Windows.Forms.Label();
+            this.txt_fechaNa = new System.Windows.Forms.TextBox();
+            this.txt_doc = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_regi
@@ -71,14 +75,14 @@ namespace TP4_Listas
             this.lbl_list.Font = new System.Drawing.Font("Cambria", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_list.Location = new System.Drawing.Point(12, 7);
             this.lbl_list.Name = "lbl_list";
-            this.lbl_list.Size = new System.Drawing.Size(164, 22);
-            this.lbl_list.TabIndex = 9;
-            this.lbl_list.Text = "Lista de pacientes";
+            this.lbl_list.Size = new System.Drawing.Size(156, 22);
+            this.lbl_list.TabIndex = 13;
+            this.lbl_list.Text = "Lista de alumnos";
             // 
             // txt_nom
             // 
             this.txt_nom.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_nom.Location = new System.Drawing.Point(109, 336);
+            this.txt_nom.Location = new System.Drawing.Point(165, 334);
             this.txt_nom.MaxLength = 25;
             this.txt_nom.Name = "txt_nom";
             this.txt_nom.Size = new System.Drawing.Size(251, 20);
@@ -87,7 +91,7 @@ namespace TP4_Listas
             // txt_ape
             // 
             this.txt_ape.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_ape.Location = new System.Drawing.Point(109, 377);
+            this.txt_ape.Location = new System.Drawing.Point(165, 375);
             this.txt_ape.MaxLength = 20;
             this.txt_ape.Name = "txt_ape";
             this.txt_ape.Size = new System.Drawing.Size(251, 20);
@@ -96,7 +100,7 @@ namespace TP4_Listas
             // txt_dir
             // 
             this.txt_dir.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_dir.Location = new System.Drawing.Point(109, 420);
+            this.txt_dir.Location = new System.Drawing.Point(165, 506);
             this.txt_dir.MaxLength = 50;
             this.txt_dir.Name = "txt_dir";
             this.txt_dir.Size = new System.Drawing.Size(251, 20);
@@ -105,7 +109,7 @@ namespace TP4_Listas
             // txt_tel
             // 
             this.txt_tel.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_tel.Location = new System.Drawing.Point(109, 464);
+            this.txt_tel.Location = new System.Drawing.Point(165, 550);
             this.txt_tel.MaxLength = 10;
             this.txt_tel.Name = "txt_tel";
             this.txt_tel.Size = new System.Drawing.Size(251, 20);
@@ -115,40 +119,40 @@ namespace TP4_Listas
             // 
             this.lbl_nom.AutoSize = true;
             this.lbl_nom.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nom.Location = new System.Drawing.Point(35, 338);
+            this.lbl_nom.Location = new System.Drawing.Point(23, 336);
             this.lbl_nom.Name = "lbl_nom";
             this.lbl_nom.Size = new System.Drawing.Size(60, 15);
-            this.lbl_nom.TabIndex = 10;
+            this.lbl_nom.TabIndex = 8;
             this.lbl_nom.Text = "Nombre:";
             // 
             // lbl_ape
             // 
             this.lbl_ape.AutoSize = true;
             this.lbl_ape.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ape.Location = new System.Drawing.Point(35, 379);
+            this.lbl_ape.Location = new System.Drawing.Point(23, 377);
             this.lbl_ape.Name = "lbl_ape";
             this.lbl_ape.Size = new System.Drawing.Size(57, 15);
-            this.lbl_ape.TabIndex = 11;
+            this.lbl_ape.TabIndex = 9;
             this.lbl_ape.Text = "Apellido";
             // 
             // lbl_dir
             // 
             this.lbl_dir.AutoSize = true;
             this.lbl_dir.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dir.Location = new System.Drawing.Point(35, 422);
+            this.lbl_dir.Location = new System.Drawing.Point(23, 508);
             this.lbl_dir.Name = "lbl_dir";
             this.lbl_dir.Size = new System.Drawing.Size(68, 15);
-            this.lbl_dir.TabIndex = 12;
+            this.lbl_dir.TabIndex = 10;
             this.lbl_dir.Text = "Direccion:";
             // 
             // lbl_tel
             // 
             this.lbl_tel.AutoSize = true;
             this.lbl_tel.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tel.Location = new System.Drawing.Point(35, 466);
+            this.lbl_tel.Location = new System.Drawing.Point(23, 552);
             this.lbl_tel.Name = "lbl_tel";
             this.lbl_tel.Size = new System.Drawing.Size(62, 15);
-            this.lbl_tel.TabIndex = 13;
+            this.lbl_tel.TabIndex = 11;
             this.lbl_tel.Text = "Telefono:";
             // 
             // btn_act
@@ -180,15 +184,57 @@ namespace TP4_Listas
             this.lst_listaEnla.Name = "lst_listaEnla";
             this.lst_listaEnla.ScrollAlwaysVisible = true;
             this.lst_listaEnla.Size = new System.Drawing.Size(1003, 212);
-            this.lst_listaEnla.TabIndex = 8;
+            this.lst_listaEnla.TabIndex = 12;
             this.lst_listaEnla.SelectedIndexChanged += new System.EventHandler(this.lst_ListaEnla_SelectedIndexChanged);
+            // 
+            // lbl_fechaNa
+            // 
+            this.lbl_fechaNa.AutoSize = true;
+            this.lbl_fechaNa.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fechaNa.Location = new System.Drawing.Point(23, 464);
+            this.lbl_fechaNa.Name = "lbl_fechaNa";
+            this.lbl_fechaNa.Size = new System.Drawing.Size(134, 15);
+            this.lbl_fechaNa.TabIndex = 17;
+            this.lbl_fechaNa.Text = "Fecha de nacimiento:";
+            // 
+            // lbl_doc
+            // 
+            this.lbl_doc.AutoSize = true;
+            this.lbl_doc.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_doc.Location = new System.Drawing.Point(23, 420);
+            this.lbl_doc.Name = "lbl_doc";
+            this.lbl_doc.Size = new System.Drawing.Size(80, 15);
+            this.lbl_doc.TabIndex = 16;
+            this.lbl_doc.Text = "Documento:";
+            // 
+            // txt_fechaNa
+            // 
+            this.txt_fechaNa.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_fechaNa.Location = new System.Drawing.Point(165, 462);
+            this.txt_fechaNa.MaxLength = 10;
+            this.txt_fechaNa.Name = "txt_fechaNa";
+            this.txt_fechaNa.Size = new System.Drawing.Size(251, 20);
+            this.txt_fechaNa.TabIndex = 15;
+            // 
+            // txt_doc
+            // 
+            this.txt_doc.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_doc.Location = new System.Drawing.Point(165, 418);
+            this.txt_doc.MaxLength = 50;
+            this.txt_doc.Name = "txt_doc";
+            this.txt_doc.Size = new System.Drawing.Size(251, 20);
+            this.txt_doc.TabIndex = 14;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BackColor = System.Drawing.Color.PaleVioletRed;
             this.ClientSize = new System.Drawing.Size(1053, 630);
+            this.Controls.Add(this.lbl_fechaNa);
+            this.Controls.Add(this.lbl_doc);
+            this.Controls.Add(this.txt_fechaNa);
+            this.Controls.Add(this.txt_doc);
             this.Controls.Add(this.lst_listaEnla);
             this.Controls.Add(this.btn_agr_sig);
             this.Controls.Add(this.btn_act);
@@ -204,7 +250,7 @@ namespace TP4_Listas
             this.Controls.Add(this.btn_elim);
             this.Controls.Add(this.btn_regi);
             this.Name = "Form1";
-            this.Text = "Pacientes";
+            this.Text = "Alumnos";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,6 +272,10 @@ namespace TP4_Listas
         private System.Windows.Forms.Button btn_act;
         private System.Windows.Forms.Button btn_agr_sig;
         private System.Windows.Forms.ListBox lst_listaEnla;
+        private System.Windows.Forms.Label lbl_fechaNa;
+        private System.Windows.Forms.Label lbl_doc;
+        private System.Windows.Forms.TextBox txt_fechaNa;
+        private System.Windows.Forms.TextBox txt_doc;
     }
 }
 
