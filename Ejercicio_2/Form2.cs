@@ -69,7 +69,7 @@ namespace Ejercicio_2
         {
             if (nodoSeleccionado != null)
             {
-                _lista.ActualizarDatos(txt_nom.Text, txt_ape.Text, txt_dir.Text, txt_tel.Text, nodoSeleccionado);
+                _lista.ActualizarDatos(txt_nom.Text, txt_ape.Text, txt_dir.Text, txt_tel.Text, txt_doc.Text, txt_fechaNa.Text, nodoSeleccionado);
                 MostrarLista();
             }
             else
@@ -82,9 +82,30 @@ namespace Ejercicio_2
         {
             if (nodoSeleccionado != null)
             {
-                if (txt_nom.Text.Length > 0 && txt_ape.Text.Length > 0 && txt_dir.Text.Length > 0 && txt_tel.Text.Length > 0)
+                if (txt_nom.Text.Length > 0 && txt_ape.Text.Length > 0 && txt_dir.Text.Length > 0 && txt_tel.Text.Length > 0 && txt_doc.Text.Length > 0 && txt_fechaNa.Text.Length > 0)
                 {
-                    _lista.AgregarSiguiente(txt_nom.Text, txt_ape.Text, txt_dir.Text, txt_tel.Text, nodoSeleccionado);
+                    _lista.AgregarSiguiente(this.txt_nom.Text, this.txt_ape.Text, this.txt_dir.Text, this.txt_tel.Text, this.txt_doc.Text, this.txt_fechaNa.Text, nodoSeleccionado);
+                    MostrarLista();
+                }
+                else
+                {
+                    MessageBox.Show("Datos invalidos");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un nodo");
+            }
+        }
+
+        private void btn_agr_ant_Click(object sender, EventArgs e)
+        {
+            if (nodoSeleccionado != null)
+            {
+                if (txt_nom.Text.Length > 0 && txt_ape.Text.Length > 0 && txt_dir.Text.Length > 0 && txt_tel.Text.Length > 0 && txt_doc.Text.Length > 0 && txt_fechaNa.Text.Length > 0)
+                {
+                    _lista.AgregarAnterior(this.txt_nom.Text, this.txt_ape.Text, this.txt_dir.Text, this.txt_tel.Text, this.txt_doc.Text, this.txt_fechaNa.Text, nodoSeleccionado);
                     MostrarLista();
                 }
                 else

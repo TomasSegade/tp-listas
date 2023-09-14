@@ -47,6 +47,7 @@ namespace Ejercicio_2
             this.lbl_doc = new System.Windows.Forms.Label();
             this.txt_fechaNa = new System.Windows.Forms.TextBox();
             this.txt_doc = new System.Windows.Forms.TextBox();
+            this.btn_agr_ant = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_regi
@@ -54,7 +55,7 @@ namespace Ejercicio_2
             this.btn_regi.Location = new System.Drawing.Point(581, 336);
             this.btn_regi.Name = "btn_regi";
             this.btn_regi.Size = new System.Drawing.Size(195, 61);
-            this.btn_regi.TabIndex = 4;
+            this.btn_regi.TabIndex = 6;
             this.btn_regi.Text = "Registrar";
             this.btn_regi.UseVisualStyleBackColor = true;
             this.btn_regi.Click += new System.EventHandler(this.btn_regi_Click);
@@ -64,7 +65,7 @@ namespace Ejercicio_2
             this.btn_elim.Location = new System.Drawing.Point(820, 336);
             this.btn_elim.Name = "btn_elim";
             this.btn_elim.Size = new System.Drawing.Size(195, 61);
-            this.btn_elim.TabIndex = 6;
+            this.btn_elim.TabIndex = 7;
             this.btn_elim.Text = "Eliminar";
             this.btn_elim.UseVisualStyleBackColor = true;
             this.btn_elim.Click += new System.EventHandler(this.btn_elim_Click);
@@ -76,7 +77,7 @@ namespace Ejercicio_2
             this.lbl_list.Location = new System.Drawing.Point(12, 7);
             this.lbl_list.Name = "lbl_list";
             this.lbl_list.Size = new System.Drawing.Size(156, 22);
-            this.lbl_list.TabIndex = 13;
+            this.lbl_list.TabIndex = 12;
             this.lbl_list.Text = "Lista de alumnos";
             // 
             // txt_nom
@@ -104,7 +105,7 @@ namespace Ejercicio_2
             this.txt_dir.MaxLength = 50;
             this.txt_dir.Name = "txt_dir";
             this.txt_dir.Size = new System.Drawing.Size(251, 20);
-            this.txt_dir.TabIndex = 2;
+            this.txt_dir.TabIndex = 4;
             // 
             // txt_tel
             // 
@@ -113,7 +114,7 @@ namespace Ejercicio_2
             this.txt_tel.MaxLength = 10;
             this.txt_tel.Name = "txt_tel";
             this.txt_tel.Size = new System.Drawing.Size(251, 20);
-            this.txt_tel.TabIndex = 3;
+            this.txt_tel.TabIndex = 5;
             // 
             // lbl_nom
             // 
@@ -122,7 +123,7 @@ namespace Ejercicio_2
             this.lbl_nom.Location = new System.Drawing.Point(23, 336);
             this.lbl_nom.Name = "lbl_nom";
             this.lbl_nom.Size = new System.Drawing.Size(60, 15);
-            this.lbl_nom.TabIndex = 8;
+            this.lbl_nom.TabIndex = 13;
             this.lbl_nom.Text = "Nombre:";
             // 
             // lbl_ape
@@ -132,7 +133,7 @@ namespace Ejercicio_2
             this.lbl_ape.Location = new System.Drawing.Point(23, 377);
             this.lbl_ape.Name = "lbl_ape";
             this.lbl_ape.Size = new System.Drawing.Size(57, 15);
-            this.lbl_ape.TabIndex = 9;
+            this.lbl_ape.TabIndex = 14;
             this.lbl_ape.Text = "Apellido";
             // 
             // lbl_dir
@@ -142,7 +143,7 @@ namespace Ejercicio_2
             this.lbl_dir.Location = new System.Drawing.Point(23, 508);
             this.lbl_dir.Name = "lbl_dir";
             this.lbl_dir.Size = new System.Drawing.Size(68, 15);
-            this.lbl_dir.TabIndex = 10;
+            this.lbl_dir.TabIndex = 17;
             this.lbl_dir.Text = "Direccion:";
             // 
             // lbl_tel
@@ -152,7 +153,7 @@ namespace Ejercicio_2
             this.lbl_tel.Location = new System.Drawing.Point(23, 552);
             this.lbl_tel.Name = "lbl_tel";
             this.lbl_tel.Size = new System.Drawing.Size(62, 15);
-            this.lbl_tel.TabIndex = 11;
+            this.lbl_tel.TabIndex = 18;
             this.lbl_tel.Text = "Telefono:";
             // 
             // btn_act
@@ -160,7 +161,7 @@ namespace Ejercicio_2
             this.btn_act.Location = new System.Drawing.Point(581, 420);
             this.btn_act.Name = "btn_act";
             this.btn_act.Size = new System.Drawing.Size(195, 64);
-            this.btn_act.TabIndex = 5;
+            this.btn_act.TabIndex = 8;
             this.btn_act.Text = "Actualizar datos";
             this.btn_act.UseVisualStyleBackColor = true;
             this.btn_act.Click += new System.EventHandler(this.btn_act_Click);
@@ -170,7 +171,7 @@ namespace Ejercicio_2
             this.btn_agr_sig.Location = new System.Drawing.Point(820, 420);
             this.btn_agr_sig.Name = "btn_agr_sig";
             this.btn_agr_sig.Size = new System.Drawing.Size(195, 64);
-            this.btn_agr_sig.TabIndex = 7;
+            this.btn_agr_sig.TabIndex = 9;
             this.btn_agr_sig.Text = "Agregar siguiente";
             this.btn_agr_sig.UseVisualStyleBackColor = true;
             this.btn_agr_sig.Click += new System.EventHandler(this.btn_agr_sig_Click);
@@ -184,7 +185,7 @@ namespace Ejercicio_2
             this.lst_listaEnla.Name = "lst_listaEnla";
             this.lst_listaEnla.ScrollAlwaysVisible = true;
             this.lst_listaEnla.Size = new System.Drawing.Size(1003, 212);
-            this.lst_listaEnla.TabIndex = 12;
+            this.lst_listaEnla.TabIndex = 11;
             this.lst_listaEnla.SelectedIndexChanged += new System.EventHandler(this.lst_ListaEnla_SelectedIndexChanged);
             // 
             // lbl_fechaNa
@@ -194,7 +195,7 @@ namespace Ejercicio_2
             this.lbl_fechaNa.Location = new System.Drawing.Point(23, 464);
             this.lbl_fechaNa.Name = "lbl_fechaNa";
             this.lbl_fechaNa.Size = new System.Drawing.Size(134, 15);
-            this.lbl_fechaNa.TabIndex = 17;
+            this.lbl_fechaNa.TabIndex = 16;
             this.lbl_fechaNa.Text = "Fecha de nacimiento:";
             // 
             // lbl_doc
@@ -204,7 +205,7 @@ namespace Ejercicio_2
             this.lbl_doc.Location = new System.Drawing.Point(23, 420);
             this.lbl_doc.Name = "lbl_doc";
             this.lbl_doc.Size = new System.Drawing.Size(80, 15);
-            this.lbl_doc.TabIndex = 16;
+            this.lbl_doc.TabIndex = 15;
             this.lbl_doc.Text = "Documento:";
             // 
             // txt_fechaNa
@@ -214,7 +215,7 @@ namespace Ejercicio_2
             this.txt_fechaNa.MaxLength = 10;
             this.txt_fechaNa.Name = "txt_fechaNa";
             this.txt_fechaNa.Size = new System.Drawing.Size(251, 20);
-            this.txt_fechaNa.TabIndex = 15;
+            this.txt_fechaNa.TabIndex = 3;
             // 
             // txt_doc
             // 
@@ -223,14 +224,25 @@ namespace Ejercicio_2
             this.txt_doc.MaxLength = 50;
             this.txt_doc.Name = "txt_doc";
             this.txt_doc.Size = new System.Drawing.Size(251, 20);
-            this.txt_doc.TabIndex = 14;
+            this.txt_doc.TabIndex = 2;
             // 
-            // Form1
+            // btn_agr_ant
+            // 
+            this.btn_agr_ant.Location = new System.Drawing.Point(820, 506);
+            this.btn_agr_ant.Name = "btn_agr_ant";
+            this.btn_agr_ant.Size = new System.Drawing.Size(195, 64);
+            this.btn_agr_ant.TabIndex = 10;
+            this.btn_agr_ant.Text = "Agregar anterior";
+            this.btn_agr_ant.UseVisualStyleBackColor = true;
+            this.btn_agr_ant.Click += new System.EventHandler(this.btn_agr_ant_Click);
+            // 
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleVioletRed;
             this.ClientSize = new System.Drawing.Size(1053, 630);
+            this.Controls.Add(this.btn_agr_ant);
             this.Controls.Add(this.lbl_fechaNa);
             this.Controls.Add(this.lbl_doc);
             this.Controls.Add(this.txt_fechaNa);
@@ -249,7 +261,7 @@ namespace Ejercicio_2
             this.Controls.Add(this.lbl_list);
             this.Controls.Add(this.btn_elim);
             this.Controls.Add(this.btn_regi);
-            this.Name = "Form1";
+            this.Name = "Form2";
             this.Text = "Alumnos";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -276,6 +288,7 @@ namespace Ejercicio_2
         private System.Windows.Forms.Label lbl_doc;
         private System.Windows.Forms.TextBox txt_fechaNa;
         private System.Windows.Forms.TextBox txt_doc;
+        private System.Windows.Forms.Button btn_agr_ant;
     }
 }
 

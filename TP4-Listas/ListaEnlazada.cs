@@ -77,9 +77,11 @@
                 nodo.Siguiente = nodoSiguienteAlElegido;
                 nodoSeleccionado.Siguiente = nodo;
             }
-            // Queda solucionar tema de cuando es el ultimo nodo y que el codigo me agrega siemppe el mismo
-            // hacer funcion max y al resultdo sumarle 1
-            // La funcion maximo debe recorrer los nodos hasta que siguiente sea null y de ese nodo, extraer el codigo
+            else
+            {
+                nodoSeleccionado.Siguiente = nodo;
+            }
+
         }
         private int BuscarMaximo(Nodo nodo, int codigo)
         {

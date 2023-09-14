@@ -51,7 +51,7 @@
 
         }
 
-        public void ActualizarDatos(string nombre, string apellido, string direccion, string telefono, Nodo nodoSeleccionado)
+        public void ActualizarDatos(string nombre, string apellido, string direccion, string telefono, string documento, string fechaNa, Nodo nodoSeleccionado)
         {
             
             if (NodoInicial != null)
@@ -60,11 +60,13 @@
                 nodoSeleccionado.Apellido = apellido;
                 nodoSeleccionado.Direccion = direccion;
                 nodoSeleccionado.Telefono = telefono;
+                nodoSeleccionado.Documento = documento;
+                nodoSeleccionado.FechaNa = fechaNa;
             }
 
         }
 
-        public void AgregarSiguiente(string nombre, string apellido, string direccion, string telefono, Nodo nodoSeleccionado)
+        public void AgregarSiguiente(string nombre, string apellido, string direccion, string telefono, string documento, string fechaNa, Nodo nodoSeleccionado)
         {
             Nodo nodo = new Nodo();
             nodo.Codigo = ProximoNumero();
@@ -72,15 +74,46 @@
             nodo.Apellido = apellido;
             nodo.Direccion = direccion;
             nodo.Telefono = telefono;
-            
+            nodo.Documento = documento;
+            nodo.FechaNa = fechaNa;
+
             Nodo nodoSiguienteAlElegido = nodoSeleccionado.Siguiente;
             if (nodoSiguienteAlElegido != null)
             {
                 nodo.Siguiente = nodoSiguienteAlElegido;
                 nodoSeleccionado.Siguiente = nodo;
             }
-            
+            else
+            {
+                nodoSeleccionado.Siguiente = nodo;
+            }
         }
+        public void AgregarAnterior(string nombre, string apellido, string direccion, string telefono, string documento, string fechaNa, Nodo nodoSeleccionado)
+        {
+            Nodo nodo = new Nodo();
+            nodo.Codigo = ProximoNumero();
+            nodo.Nombre = nombre;
+            nodo.Apellido = apellido;
+            nodo.Direccion = direccion;
+            nodo.Telefono = telefono;
+            nodo.Documento = documento;
+            nodo.FechaNa = fechaNa;
+
+            Nodo nodoAnteriorAlSeleccionado = BuscarAnterior(NodoInicial, nodoSeleccionado.Codigo);
+            if (nodoAnteriorAlSeleccionado != null)
+            {
+                nodoAnteriorAlSeleccionado.Siguiente = nodo;
+                nodo.Siguiente = nodoSeleccionado;
+            }
+            else
+            {
+                Nodo aux = NodoInicial;
+                NodoInicial = nodo;
+                nodo.Siguiente = aux;
+            }
+
+        }
+
         private int BuscarMaximo(Nodo nodo, int codigo)
         {
             //condition ? consequent : alternative
