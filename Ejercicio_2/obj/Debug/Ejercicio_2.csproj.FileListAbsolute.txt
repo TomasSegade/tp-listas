@@ -8,3 +8,13 @@ C:\Users\Tomas\source\repos\tp-listas\Ejercicio_2\bin\Debug\Ejercicio_2.pdb
 C:\Users\Tomas\source\repos\tp-listas\Ejercicio_2\obj\Debug\Ejercicio_2.exe
 C:\Users\Tomas\source\repos\tp-listas\Ejercicio_2\obj\Debug\Ejercicio_2.pdb
 C:\Users\Tomas\source\repos\tp-listas\Ejercicio_2\obj\Debug\Ejercicio_2.Form2.resources
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_2\bin\Debug\Ejercicio_2.exe.config
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_2\bin\Debug\Ejercicio_2.exe
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_2\bin\Debug\Ejercicio_2.pdb
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_2\obj\Debug\Ejercicio_2.csproj.AssemblyReference.cache
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_2\obj\Debug\Ejercicio_2.Form2.resources
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_2\obj\Debug\Ejercicio_2.Properties.Resources.resources
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_2\obj\Debug\Ejercicio_2.csproj.GenerateResource.cache
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_2\obj\Debug\Ejercicio_2.csproj.CoreCompileInputs.cache
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_2\obj\Debug\Ejercicio_2.exe
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_2\obj\Debug\Ejercicio_2.pdb

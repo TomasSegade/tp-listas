@@ -1,0 +1,10 @@
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_3\bin\Debug\Ejercicio_3.exe.config
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_3\bin\Debug\Ejercicio_3.exe
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_3\bin\Debug\Ejercicio_3.pdb
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_3\obj\Debug\Ejercicio_3.csproj.AssemblyReference.cache
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_3\obj\Debug\Ejercicio_3.Form3.resources
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_3\obj\Debug\Ejercicio_3.Properties.Resources.resources
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_3\obj\Debug\Ejercicio_3.csproj.GenerateResource.cache
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_3\obj\Debug\Ejercicio_3.csproj.CoreCompileInputs.cache
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_3\obj\Debug\Ejercicio_3.exe
+D:\Users\Tomas\source\repos\tp-listas\Ejercicio_3\obj\Debug\Ejercicio_3.pdb

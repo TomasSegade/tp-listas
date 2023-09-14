@@ -1,0 +1,17 @@
+ejercicio 3:
+	//preguntar si:
+  Debe generar la edad de todos los espectadores aleatoreamente entre 5 y 60
+            //Edad minima 5
+            //poner un precio a entrada para total recaudado
+            //cantidad espectadores 0 a 50 aleatorio
+
+
+
+ejercicio 4:
+	//preguntar cual seria la idea para eliminar al ultimo o de q va el ejercicio
+
+ejercicio 5:
+	//preg si el mismo metodo eliminar el 1 sirve o ahce falta crear uno nuevo
+
+ejercicio 6:
+	//igual q el 3

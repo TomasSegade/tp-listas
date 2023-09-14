@@ -60,7 +60,7 @@ namespace TP4_Listas
             this.btn_elim.Location = new System.Drawing.Point(820, 336);
             this.btn_elim.Name = "btn_elim";
             this.btn_elim.Size = new System.Drawing.Size(195, 61);
-            this.btn_elim.TabIndex = 6;
+            this.btn_elim.TabIndex = 5;
             this.btn_elim.Text = "Eliminar";
             this.btn_elim.UseVisualStyleBackColor = true;
             this.btn_elim.Click += new System.EventHandler(this.btn_elim_Click);
@@ -156,7 +156,7 @@ namespace TP4_Listas
             this.btn_act.Location = new System.Drawing.Point(581, 420);
             this.btn_act.Name = "btn_act";
             this.btn_act.Size = new System.Drawing.Size(195, 64);
-            this.btn_act.TabIndex = 5;
+            this.btn_act.TabIndex = 6;
             this.btn_act.Text = "Actualizar datos";
             this.btn_act.UseVisualStyleBackColor = true;
             this.btn_act.Click += new System.EventHandler(this.btn_act_Click);
