@@ -1,19 +1,20 @@
-﻿namespace Ejercicio_5
+﻿using System;
+
+namespace TP4_Listas
 {
     class ListaEnlazada
     {
         public Nodo NodoInicial; //Declaro un nodo que va a estar inicializado en null
-        //public Nodo NodoFinal;
         
 
-        public void Registrar(string nombre, string apellido, string direccion, string telefono)
+        public void AgregarCola(string nombre, string importe)
         {
             Nodo nodo = new Nodo();
             nodo.Codigo = ProximoNumero();
             nodo.Nombre = nombre;
-            nodo.Apellido = apellido;
-            nodo.Direccion = direccion;
-            nodo.Telefono = telefono;
+            nodo.Importe = Convert.ToDouble(importe);
+            nodo.FechaHora = DateTime.Now;
+            
 
             if (NodoInicial == null)
             {
@@ -22,91 +23,35 @@
             else
             {
                 Nodo aux = NodoInicial;
-
                 NodoInicial = nodo;
-                NodoInicial.Anterior = null;
                 nodo.Siguiente = aux;
-                nodo.Siguiente.Anterior = nodo;
 
             }
         }
 
 
-        public void EliminarSeleccionado(int codigo)
+        public void Cobrar (string importe)
         {
             //para eliminar necesito que cambiar la direccion del nodo anterior al actual seleccionado apunte al siguiente.siguiente 
-
-            if (NodoInicial != null)
-            {
-                if (NodoInicial.Codigo == codigo)
-                {
-                    NodoInicial = NodoInicial.Siguiente;
-                }
-                else
-                {
-                    Nodo nodoAnteriorAlElegido = BuscarAnterior(NodoInicial, codigo);
-                    if (nodoAnteriorAlElegido != null)
-                    {
-                        nodoAnteriorAlElegido.Siguiente = nodoAnteriorAlElegido.Siguiente.Siguiente;
-                    }
-                }
-            }
+            double totalRecaudado =+ Convert.ToDouble(importe);
+            //ME QUEDE ACA
 
         }
 
-        public void ActualizarDatos(string nombre, string apellido, string direccion, string telefono, Nodo nodoSeleccionado)
-        {
-            
-            if (NodoInicial != null)
-            {
-                nodoSeleccionado.Nombre = nombre;
-                nodoSeleccionado.Apellido = apellido;
-                nodoSeleccionado.Direccion = direccion;
-                nodoSeleccionado.Telefono = telefono;
-            }
-
-        }
-
-        public void AgregarSiguiente(string nombre, string apellido, string direccion, string telefono, Nodo nodoSeleccionado)
-        {
-            Nodo nodo = new Nodo();
-            nodo.Codigo = ProximoNumero();
-            nodo.Nombre = nombre;
-            nodo.Apellido = apellido;
-            nodo.Direccion = direccion;
-            nodo.Telefono = telefono;
-            
-            Nodo nodoSiguienteAlElegido = nodoSeleccionado.Siguiente;
-            if (nodoSiguienteAlElegido != null)
-            {
-                nodo.Siguiente = nodoSiguienteAlElegido;
-                nodoSeleccionado.Siguiente = nodo;
-            }
-            else
-            {
-                nodoSeleccionado.Siguiente = nodo;
-            }
-
-        }
+        
+        
         private int BuscarMaximo(Nodo nodo, int codigo)
         {
-            //condition ? consequent : alternative
-
             int max = nodo.Codigo > codigo ? nodo.Codigo : codigo;
             if (nodo.Siguiente != null) //no es el ultimo
             {
-
                 return BuscarMaximo(nodo.Siguiente, max);
-
             }
             else
             {
                 return max;
             }
-
-
         }
-
 
         private int ProximoNumero()
         {
@@ -115,12 +60,7 @@
                 return 1;
             }
             int max = BuscarMaximo(NodoInicial, NodoInicial.Codigo);
-
-            //busco el maximo y le sumo uno
-
             return max + 1;
-
-
         }
 
        

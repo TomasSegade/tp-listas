@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_3", "Ejercicio_3\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_4", "Ejercicio_4\Ejercicio_4.csproj", "{91D558D3-124E-477A-B7B4-9E2FEA577AF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_5", "Ejercicio_5\Ejercicio_5.csproj", "{65D1549D-F005-4612-8317-A10F4576C379}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP4-Listas", "Ejercicio_5\TP4-Listas.csproj", "{65D1549D-F005-4612-8317-A10F4576C379}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

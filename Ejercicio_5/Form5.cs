@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Ejercicio_5
+namespace TP4_Listas
 {
     public partial class Form5 : Form
     {
         ListaEnlazada _lista = new ListaEnlazada();
-        Nodo nodoSeleccionado;
         public Form5()
         {
             InitializeComponent();
@@ -30,11 +29,14 @@ namespace Ejercicio_5
         }
 
 
-        private void btn_regi_Click(object sender, EventArgs e)
+        private void btn_agregarCola_Click(object sender, EventArgs e)
         {
-            if (txt_nom.Text.Length > 0 && txt_ape.Text.Length > 0 && txt_dir.Text.Length > 0 && txt_tel.Text.Length > 0)
+            //Validar que no se ingrese letras en el campo
+            //agregar iconos y msj de warning
+
+            if (txt_nom.Text.Length > 0 && txt_importe.Text.Length > 0 )
             {
-                _lista.Registrar(this.txt_nom.Text, this.txt_ape.Text, this.txt_dir.Text, this.txt_tel.Text);
+                _lista.AgregarCola(this.txt_nom.Text, this.txt_importe.Text);
                 MostrarLista();
             }
             else
@@ -43,40 +45,44 @@ namespace Ejercicio_5
             }
         }
 
-        private void btn_elim_Click(object sender, EventArgs e)
+        //Usar este elemento para eliminar de la cola, agregar que al eliminar el impoirte se vaya sumando y mostrando por pantalla
+        private void btn_cobrar_Click(object sender, EventArgs e)
         {
-
-            if (nodoSeleccionado != null)
+            
+            // si no hay nadie en la cola que no se pueda cobrar
+            
+            if (_lista.NodoInicial != null)
             {
-                _lista.EliminarSeleccionado(nodoSeleccionado.Codigo);
+                _lista.Cobrar(txt_importe.Text);
                 MostrarLista();
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un nodo");
+                MessageBox.Show("No hay nadie para cobrar");
             }
 
-
+            
         }
-
-        private void lst_ListaEnla_SelectedIndexChanged(object sender, EventArgs e)
+        private void txt_importe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            nodoSeleccionado = (Nodo)this.lst_listaEnla.SelectedItem;
-
-        }
-
-        private void btn_act_Click(object sender, EventArgs e)
-        {
-            if (nodoSeleccionado != null)
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
-                _lista.ActualizarDatos(txt_nom.Text, txt_ape.Text, txt_dir.Text, txt_tel.Text, nodoSeleccionado);
-                MostrarLista();
+                MessageBox.Show("Solo números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
             }
-            else
+        }
+
+        private void txt_nom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
-                MessageBox.Show("Debe seleccionar un nodo");
+                MessageBox.Show("Solo letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
             }
         }
 
     }
 }
+
